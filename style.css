@@ -201,7 +201,6 @@ nav {
   border-bottom: none;
 }
 
-/* Hide the checkbox */
 .accordion-toggle {
   display: none;
 }
@@ -241,7 +240,7 @@ nav {
 }
 
 .accordion-toggle:checked ~ .accordion-content {
-  max-height: 200px; /* Arbitrary large height */
+  max-height: 200px;
   padding: 1.5rem;
 }
 
@@ -295,8 +294,6 @@ span[data-tooltip]:hover::after {
   transform: translateX(-50%) translateY(0);
 }
 
-/* * FOOTER 
-         */
 footer {
   padding: 50px 0;
   text-align: center;
@@ -305,8 +302,6 @@ footer {
   border-top: 1px solid #222;
 }
 
-/* * ANIMATION KEYFRAMES 
-         */
 @keyframes fadeIn {
   from {
     opacity: 0;
