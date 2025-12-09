@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>It's not JavaScript</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>
+          Zero Script.<br /><span class="gradient-text">Pure Style.</span>
+        </h1>
+        <p style="margin: 0 auto">
+          Experience the raw power of CSS3. No JavaScript was loaded to render
+          this page.
+        </p>
+      </div>
+      <div class="scroll-indicator">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+        </svg>
+      </div>
+    </header>
+
+    <nav>
+      <div class="nav-pill">
+        <a href="#philosophy">Philosophy</a>
+        <a href="#interactivity">Logic</a>
+        <a href="#layout">Layout</a>
+      </div>
+    </nav>
+
+    <main class="container">
+      <section id="philosophy">
+        <h2>The <span class="gradient-text">Philosophy</span></h2>
+        <p>
+          For years, developers have reached for heavy JavaScript libraries to
+          achieve simple effects. However, CSS has evolved. We now have
+          variables, calculations, grid systems, and filters natively in the
+          browser engine.
+        </p>
+        <p>
+          This results in faster load times, smoother 60fps animations
+          (offloaded to the GPU), and better battery life for mobile devices.
+        </p>
+
+        <div class="grid-section">
+          <article class="card">
+            <h3>Native Variables</h3>
+            <p>
+              Change one line of code and the entire theme updates instantly. No
+              state management required.
+            </p>
+          </article>
+          <article class="card">
+            <h3>GPU Animations</h3>
+            <p>
+              Silky smooth transitions using `transform` and `opacity` that
+              don't block the main thread.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Focus Management</h3>
+            <p>
+              Using `:focus-within` and `:target` to handle user states without
+              event listeners.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="interactivity">
+        <h2>Logic <span class="gradient-text">Without Script</span></h2>
+        <p>
+          Interactive components usually require `onClick` events. But by
+          utilizing the
+          <span data-tooltip="Using inputs to control sibling elements"
+            >"Checkbox Hack"</span
+          >, we can maintain state purely in HTML and CSS. Try the accordion
+          below.
+        </p>
+
+        <div class="accordion-wrapper">
+          <div class="accordion-item">
+            <input type="checkbox" id="item1" class="accordion-toggle" />
+            <label for="item1" class="accordion-label"
+              >How does this work?</label
+            >
+            <div class="accordion-content">
+              <p>
+                It uses the CSS Sibling Selector (~). When the hidden checkbox
+                is checked, CSS looks for the sibling content div and changes
+                its max-height.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <input type="checkbox" id="item2" class="accordion-toggle" />
+            <label for="item2" class="accordion-label"
+              >Is this accessible?</label
+            >
+            <div class="accordion-content">
+              <p>
+                If implemented correctly with labels, yes! It allows keyboard
+                navigation and screen readers can interact with the form
+                elements.
+              </p>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <input type="checkbox" id="item3" class="accordion-toggle" />
+            <label for="item3" class="accordion-label"
+              >What about performance?</label
+            >
+            <div class="accordion-content">
+              <p>
+                It is blazing fast. The browser handles the state changes
+                natively without parsing any script tags.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tooltip-container">
+          <p>
+            Hover over this text:
+            <span data-tooltip="I am a pure CSS tooltip!">Hover Me</span>
+          </p>
+        </div>
+      </section>
+
+      <section id="layout">
+        <h2>Modern <span class="gradient-text">Layouts</span></h2>
+        <p>
+          With Flexbox and CSS Grid, we can create complex, magazine-style
+          layouts that adapt fluidly to any screen size without complex math or
+          window resize listeners.
+        </p>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 200px;
+            gap: 1rem;
+            margin-top: 2rem;
+          "
+        >
+          <div
+            style="
+              background: #151515;
+              border-radius: 10px;
+              grid-column: span 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #333;
+            "
+          >
+            <span style="font-size: 2rem; font-weight: bold; color: #333"
+              >Bento Box</span
+            >
+          </div>
+          <div
+            style="
+              background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <span style="color: #000; font-weight: bold">Gradient</span>
+          </div>
+          <div
+            style="
+              background: #111;
+              border-radius: 10px;
+              grid-row: span 2;
+              border: 1px solid #333;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          >
+            <span
+              style="
+                writing-mode: vertical-rl;
+                text-orientation: mixed;
+                color: #444;
+                font-weight: bold;
+                letter-spacing: 5px;
+              "
+              >VERTICAL</span
+            >
+          </div>
+          <div
+            style="
+              background: #151515;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #333;
+            "
+          >
+            <span style="color: #444">Grid</span>
+          </div>
+          <div
+            style="
+              background: #151515;
+              border-radius: 10px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid #333;
+            "
+          >
+            <span style="color: #444">Auto</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Rendered with ❤️ and CSS only.</p>
+    </footer>
+  </body>
+</html>
